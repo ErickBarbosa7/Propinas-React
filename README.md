@@ -1,17 +1,21 @@
-# React + Vite
+# Calculadora de Propinas y Consumo
+![Vista del Proyecto](./assets/image.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tecnologías Utilizadas
 
-Currently, two official plugins are available:
+* **React (v18):**
+* **Vite:**
+* **Tailwind CSS**
+* **JavaScript**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Conceptos de React Aplicados
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Propinas-React" 
+* **Componentes:** Separación de la interfaz en piezas reutilizables (`Header`, `Menu`, `Consumo`).
+* **State (Estado):** Uso del hook `useState` para manejar dinámicamente el carrito de compras (`order`) y el porcentaje de propina seleccionado (`tip`).
+* **Props:** Comunicación entre componentes, pasando datos (como el menú) y funciones (como `addItem` o `removeItem`) del componente padre (`App`) a los hijos.
+* **Renderizado de Listas:** Uso del método `.map()` de JavaScript junto con la propiedad `key` para iterar sobre la base de datos y renderizar el menú y el resumen de la orden dinámicamente.
+* **Interpolación:** Inserción de variables y ejecución de operaciones matemáticas directamente en la interfaz usando llaves `{}`.
+* **Eventos:** Manejo de interacciones del usuario mediante `onClick` y `onChange`.
+* **`.findIndex()`:** Utilizado para buscar si un platillo ya existe en la orden antes de agregarlo. Si existe, se actualiza la cantidad sin duplicar el registro; si no, se agrega como un elemento nuevo.
+* **`.filter()`:** Utilizado en la función de eliminar elementos de la orden, creando un nuevo arreglo que excluye el ID seleccionado.
+* **Inmutabilidad:** Al actualizar el estado, se utilizaron copias de los arreglos (Spread Operator `...`) para evitar mutar el estado original directamente, siguiendo las mejores prácticas de React.
