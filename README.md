@@ -1,5 +1,5 @@
 # Calculadora de Propinas y Consumo
-![Vista del Proyecto](./assets/image.png)
+![Vista del Proyecto](./src/assets/image.png)
 
 ## Tecnologías Utilizadas
 
